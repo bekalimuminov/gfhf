@@ -1,0 +1,54 @@
+.wrapper {
+    display: flex;
+    width: 25%;
+    margin: 0 auto;
+    gap: 100px;
+}
+
+.tip {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.tip::after {
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 4px;
+    display: none;
+}
+
+.tip:hover::after {
+    display: block;
+}
+
+.top::after {
+    content: "Top";
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right::after {
+    content: "Right";
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+.left::after {
+    content: "Left";
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+}
+
+.bottom::after {
+    content: "Bottom";
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
